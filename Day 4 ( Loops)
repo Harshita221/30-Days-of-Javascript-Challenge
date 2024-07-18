@@ -1,0 +1,83 @@
+Task 1: Print numbers from 1 to 10 using a for loop
+console.log("Numbers from 1 to 10:");
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+Task 2: Print multiplication table of 5 using a for loop
+console.log("Multiplication table of 5:");
+for (let i = 1; i <= 10; i++) {
+    console.log(`5 * ${i} = ${5 * i}`);
+}
+
+Task 3: Calculate sum of numbers from 1 to 10 using a while loop
+let sum=0;
+let num=1;
+while(num<=10)
+{
+sum=sum+num;
+num++;
+}
+console.log(`Sum of numbers from 1 to 10 is: ${sum}`);
+
+Task 4: Print numbers from 10 to 1 using a while loop
+console.log("Numbers from 10 to 1:");
+let number = 10;
+
+while (number >= 1) {
+    console.log(number);
+    number--;
+}
+
+
+Task 5: Print numbers from 1 to 5 using a do... while loop
+console.log("Numbers from 1 to 5:");
+let n = 1;
+
+do {
+    console.log(n);
+    n++;
+
+} while (n <= 5);
+
+
+Task 6: Calculate factorial of a number using a do... while loop
+let numFactorial=5;
+let factorial=1;
+let i=1;
+do{
+factorial=factorial*i;
+i++;
+}
+while(i<=numFactorial);
+
+console.log(`Factorial of ${numFactorial} is: ${factorial}`);
+
+
+Task 7: Print a pattern using nested for loops
+console.log("Pattern using nested loops:");
+for (let i = 1; i <= 5; i++) {
+    let pattern = "";
+    for (let j = 1; j <= i; j++) {
+        pattern += "* ";
+    }
+    console.log(pattern);
+}
+
+Task 8: Print numbers from 1 to 10, skip number 5 using continue statement
+console.log("Numbers from 1 to 10, skipping 5:");
+for (let i = 1; i <= 10; i++) {
+    if (i === 5) {
+        continue;
+    }
+    console.log(i);
+}
+
+Task 9: Print numbers from 1 to 10, stop loop when number is 7 using break statement
+console.log("Numbers from 1 to 10, stopping at 7:");
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+    if (i === 7) {
+        break;
+    }
+}
