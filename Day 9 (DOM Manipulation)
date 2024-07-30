@@ -1,0 +1,217 @@
+Day 9: DOM Manipulation
+Tasks/Activities:
+Activity 1: Selecting and Manipulating Elements
+• Task 1: Select an HTML element by its ID and change its text content.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+  <h1 id="header">Original Header</h1>
+  <script> 
+document.getElementById('header).text.Content='Updated Header';
+</script>
+</body>
+</html>
+ 
+
+• Task 2: Select an HTML element by its class and change its background color.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+  <style>
+    .highlight {
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="highlight">Change my background color</div>
+  <script>
+    document.querySelector('.highlight').style.backgroundColor = 'yellow';
+  </script>
+</body>
+</html>
+
+
+Activity 2: Creating and Appending Elements
+• Task 3: Create a new div element with some text content and append it to the body.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+<script>
+let newDiv=document.createElement('div');
+newDiv.textContent="New div";
+document.body.appendChild(newDiv);
+</script>
+</body>
+</html>
+
+
+• Task 4: Create a new li element and add it to an existing ul list.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+<script>
+let newLi=document.createElement('li');
+newLi.textContent='New list';
+document.getElementById('myList').appendChild(newLi);
+</script>
+</body>
+</html>
+
+
+Activity 3: Removing Elements
+• Task 5: Select an HTML element and remove it from the DOM.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+  <p id="removeMe">This paragraph will be removed.</p>
+  <script>
+    let elementToRemove = document.getElementById('removeMe');
+    elementToRemove.remove();
+  </script>
+</body>
+</html>
+
+• Task 6: Remove the last child of a specific HTML element.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+  <script>
+    let list = document.getElementById('myList');
+    list.removeChild(list.lastElementChild);
+  </script>
+</body>
+</html>
+
+
+
+Activity 4: Modifying Attributes and Classes
+• Task 7: Select an HTML element and change one of its attributes (e.g., src of an img tag).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+  <img id="myImage" src="old_image.jpg" alt="Old Image">
+  <script>
+    document.getElementById('myImage').setAttribute('src', 'new_image.jpg');
+  </script>
+</body>
+</html>
+
+
+• Task 8: Add and remove a CSS class to/from an HTML element
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <p id="myParagraph">This paragraph will be highlighted.</p>
+  <script>
+    let paragraph = document.getElementById('myParagraph');
+    paragraph.classList.add('highlight');
+    console.log(paragraph); // To see the added class
+    paragraph.classList.remove('highlight');
+    console.log(paragraph); // To see the removed class
+  </script>
+</body>
+</html>
+
+.Activity 5: Event Handling
+• Task 9: Add a click event listener to a button that changes the text content of a paragraph.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+  <button id="myButton">Click me</button>
+  <p id="myParagraph">Original text</p>
+  <script>
+    document.getElementById('myButton').addEventListener('click', function() {
+      document.getElementById('myParagraph').textContent = 'Text has been changed!';
+    });
+  </script>
+</body>
+</html>
+
+
+• Task 10: Add a mouseover event listener to an element that changes its border color
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+  <style>
+    #hoverElement {
+      width: 200px;
+      height: 100px;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="hoverElement">Hover over me</div>
+  <script>
+    document.getElementById('hoverElement').addEventListener('mouseover', function() {
+      this.style.borderColor = 'red';
+    });
+  </script>
+</body>
+</html>
